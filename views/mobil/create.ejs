@@ -55,6 +55,7 @@
                                     <div class="form-group col-sm-12">
                                         <label>Tahun</label>
                                         <select class="form-control form-control-solid" name="tahunPopup" id="tahun">
+                                            <option value="0">Please choose</option>
                                             <% for(var i=0; i < tahun.length; i++) { %>
                                                 <option value="<%= tahun[i].tahun %>"><%= tahun[i].tahun %></option>
                                             <% } %>
@@ -2454,7 +2455,7 @@ function copyData(){
     var merk = $("#merkPopup").val();
     var groupmodel = $("#groupmodelPopup").val();
     var model = $("#modelPopup").val();
-
+    // var tahun = $("#tahunPopup").val();
     window.location.href = '/mobil/copy/?merk=' + merk + '&groupmodel=' + groupmodel + '&model=' + model;
 }
 </script>

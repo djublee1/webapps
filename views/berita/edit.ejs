@@ -31,9 +31,9 @@
                             <option value="">Please choose</option>
                             <% for(var i=0; i < dataMobil.length; i++) { %>
                                 <% if(data.mobil_id == dataMobil[i].id) {%>
-                                    <option value="<%= dataMobil[i].id %>" selected><%= dataMobil[i].merk %> <%= dataMobil[i].group_model %> <%= dataMobil[i].model %></option>
+                                    <option value="<%= dataMobil[i].id %>" selected><%= dataMobil[i].merk %> <%= dataMobil[i].group_model %> <%= dataMobil[i].model %> <%= dataMobil[i].tahun %></option>
                                 <% } else { %>
-                                    <option value="<%= dataMobil[i].id %>"><%= dataMobil[i].merk %> <%= dataMobil[i].group_model %> <%= dataMobil[i].model %></option>
+                                    <option value="<%= dataMobil[i].id %>"><%= dataMobil[i].merk %> <%= dataMobil[i].group_model %> <%= dataMobil[i].model %> <%= dataMobil[i].tahun %></option>
                                 <% } %>
                             <% } %>
                         </select>
@@ -42,7 +42,7 @@
                 </div>
                 <div class="card-footer">
                     <button type="submit" class="btn btn-primary mr-2">Submit</button>
-                    <button type="/berita" class="btn btn-secondary">Cancel</button>
+                    <a href="/berita"><button type="button" class="btn btn-secondary">Cancel</button></a>
                 </div>
             </form>
             <!--end::Form-->

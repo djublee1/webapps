@@ -1599,15 +1599,15 @@ app.get("/api/entertaiment/:id", async (req, res) => {
     }
 });
 
-app.get("/api/berita/:id", async (req, res) => {
-    try {
-        const { id } = req.params;
-        let getBerita = await pool.query("Select * from berita where mobil_id = $1", [id]);
-        res.json(getBerita.rows[0]);
-    } catch (error) {
-        res.json(error.message);
-    }
-});
+// app.get("/api/berita/:id", async (req, res) => {
+//     try {
+//         const { id } = req.params;
+//         let getBerita = await pool.query("Select * from berita where mobil_id = $1", [id]);
+//         res.json(getBerita.rows[0]);
+//     } catch (error) {
+//         res.json(error.message);
+//     }
+// });
 
 app.get("/api/eksteriorphoto/:id", async (req, res) => {
     try {
@@ -1702,7 +1702,8 @@ app.get("/api/berita/:id", async (req, res) => {
     try {
         const { id } = req.params;
         let getEntertaiment = await pool.query("Select * from berita where mobil_id = $1", [id]);
-        let objEntertaiment = getEntertaiment.rows[0];
+        let objEntertaiment = getEntertaiment.rows;
+        console.log(objEntertaiment);
         res.json(objEntertaiment);
     } catch (error) {
         res.json(error.message);

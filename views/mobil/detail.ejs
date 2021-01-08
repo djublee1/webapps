@@ -1,0 +1,900 @@
+<style>
+    img {
+        object-fit: contain;
+    }
+</style>
+
+<div class="d-flex flex-column-fluid">
+    <div class="container">
+        <div class="subheader py-2 py-lg-4 subheader-solid" id="kt_subheader">
+            <div class="container-fluid d-flex align-items-center justify-content-between flex-wrap flex-sm-nowrap">
+                <div class="d-flex align-items-center flex-wrap mr-2">
+                    <h5 class="text-dark font-weight-bold mt-2 mb-2 mr-5">Mobil</h5>
+                    <div class="subheader-separator subheader-separator-ver mt-2 mb-2 mr-4 bg-gray-200"></div>
+                    <span class="text-muted font-weight-bold mr-4">Detail Data</span>
+                </div>
+            </div>
+        </div>
+        <div class="card card-custom gutter-b example example-compact">
+            <!--begin::Form-->
+            
+                <div class="card-body">
+                    <div class="form-group col-sm-4">
+                        <h3>Detail Mobil</h3>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="form-group col-sm-6">
+                                <label class="col-sm-7">Merk <span style="float: right;">:</span></label>
+                                <label class="label-control"><%= DataHeader.merk %></label>
+                            </div>
+                            <div class="form-group col-sm-6">
+                                <label class="col-sm-7">Model <span style="float: right;">:</span></label>
+                                <label class="label-control"><%= DataHeader.model %></label>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group col-sm-6">
+                                <label class="col-sm-7">Group Model <span style="float: right;">:</span></label>
+                                <label class="label-control"><%= DataHeader.group_model %></label>
+                            </div>
+                            <div class="form-group col-sm-6">
+                                <label class="col-sm-7">Tahun <span style="float: right;">:</span></label>
+                                <label class="label-control "><%= DataHeader.tahun %></label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- <div class="card-footer">
+                    <button type="submit" class="btn btn-primary mr-2">Submit</button>
+                    <button type="/groupmodel" class="btn btn-secondary">Cancel</button>
+                </div> -->
+            
+            <!--end::Form-->
+        </div>
+        <div class="card card-custom gutter-b example example-compact">
+            <div class="card-header">
+                <h3 class="card-title">Detail Spesifikasi</h3>
+            </div>
+            <!--begin::Form-->
+            <div class="card-body">
+                <ul class="nav nav-tabs" id="myTab" role="tablist">
+                    <li class="nav-item">
+                        <a class="nav-link active" id="contact-tab" data-toggle="tab" href="#eksterior" aria-controls="eksterior">
+                            <span class="nav-text">Eksterior</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="interior-tab" data-toggle="tab" href="#interior" aria-controls="interior">
+                            <span class="nav-text">Interior</span>
+                        </a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a class="nav-link" id="contact-tab" data-toggle="tab" href="#dimensi" aria-controls="dimensi">
+                            <span class="nav-text">Dimensi</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="home-tab" data-toggle="tab" href="#home">
+                            <span class="nav-text">Mesin</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="profile-tab" data-toggle="tab" href="#peforma" aria-controls="peforma">
+                            <span class="nav-text">Performa</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="safety-tab" data-toggle="tab" href="#safety" aria-controls="safety">
+                            <span class="nav-text">Safety</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="entertaiment-tab" data-toggle="tab" href="#entertaiment" aria-controls="entertaiment">
+                            <span class="nav-text">Entertaiment & Koneksi</span>
+                        </a>
+                    </li>
+                </ul>
+                <div class="tab-content mt-5" id="myTabContent">
+                    <div class="tab-pane fade" id="home" role="tabpanel" aria-labelledby="home-tab">
+                        <div class="row">
+                            <div class="form-group col-sm-6">
+                                <label class="col-sm-6">Tipe <span style="float: right;">:</span></label>
+                                <label class="label-control "><%= DataMesin.tipe %></label>
+                            </div>
+                            <div class="form-group col-sm-6">
+                                <label class="col-sm-6">Kapasitas Mesin <span style="float: right;">:</span></label>
+                                <label class="label-control "><%= DataMesin.kapasitas_mesin %></label>
+                            </div>
+                            <div class="form-group col-sm-6">
+                                <label class="col-sm-6">Kapasitas Tangki <span style="float: right;">:</span></label>
+                                <label class="label-control "><%= DataMesin.kapasitas_tangki %></label>
+                            </div>
+                            <div class="form-group col-sm-6">
+                                <label class="col-sm-6">Max. Power <span style="float: right;">:</span></label>
+                                <label class="label-control "><%= DataMesin.max_power %></label>
+                            </div>
+                            <div class="form-group col-sm-6">
+                                <label class="col-sm-6">Max. Torque <span style="float: right;">:</span></label>
+                                <label class="label-control "><%= DataMesin.max_torque %></label>
+                            </div>
+                            <div class="form-group col-sm-6">
+                                <label class="col-sm-6">Cylinder <span style="float: right;">:</span></label>
+                                <label class="label-control "><%= DataMesin.cylinder %></label>
+                            </div>
+                            <div class="form-group col-sm-6">
+                                <label class="col-sm-6">Valve Per Cylinder <span style="float: right;">:</span></label>
+                                <label class="label-control "><%= DataMesin.valve_per_cylinder %></label>
+                            </div>
+                            <div class="form-group col-sm-6">
+                                <label class="col-sm-6">Turbo Charged <span style="float: right;">:</span></label>
+                                <label class="label-control "><%= DataMesin.turbo_charged %></label>
+                            </div>
+                            <div class="form-group col-sm-6">
+                                <label class="col-sm-6">Transmisi<span style="float: right;">:</span></label>
+                                <label class="label-control "><%= DataMesin.transmisi %></label>
+                            </div>
+                            <div class="form-group col-sm-6">
+                                <label class="col-sm-6">Gearbox<span style="float: right;">:</span></label>
+                                <label class="label-control "><%= DataMesin.gearbox %></label>
+                            </div>
+                            <div class="form-group col-sm-6">
+                                <label class="col-sm-6">Clutch<span style="float: right;">:</span></label>
+                                <label class="label-control "><%= DataMesin.clutch %></label>
+                            </div>
+                        </div>
+                        <% if(DataMesinPhoto != null || DataMesinPhoto.length > 0){ %>
+                        <div class="form-group row" style="margin-top: 10px;">
+                            <% for(var i=0; i < DataMesinPhoto.length; i++) { %>
+                                <div class="col-lg-2">
+                                    <div class="col-sm-3">
+                                        <div class="form-group col-sm-3">
+                                            <div class="image-input image-input-outline" id="" style="background-image: url(/uploads/<%=DataMesinPhoto[i].file_name%>);">
+                                                <div class="image-input-wrapper">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            <% } %>
+                        </div>
+                        <% } %>
+                    </div>
+                    <div class="tab-pane fade" id="peforma" role="tabpanel" aria-labelledby="peforma-tab">
+                        <div class="row">
+                            <div class="form-group col-sm-6">
+                                <label class="col-sm-6">Akselerasi 0/100 km/jam<span style="float: right;">:</span></label>
+                                <label class="label-control "><%= DataPerforma.akselerasi %></label>
+                            </div>
+                            <div class="form-group col-sm-6">
+                                <label class="col-sm-6">Top Speed<span style="float: right;">:</span></label>
+                                <label class="label-control "><%= DataPerforma.top_speed %></label>
+                            </div>
+                            <div class="form-group col-sm-6">
+                                <label class="col-sm-6">1/4 mile<span style="float: right;">:</span></label>
+                                <label class="label-control "><%= DataPerforma.mile %></label>
+                            </div>
+                            <div class="form-group col-sm-6">
+                                <label class="col-sm-6">Braking 100 km/jam<span style="float: right;">:</span></label>
+                                <label class="label-control "><%= DataPerforma.braking %></label>
+                            </div>
+                            <div class="form-group col-sm-6">
+                                <label class="col-sm-6">Tipe Bahan Bakar<span style="float: right;">:</span></label>
+                                <label class="label-control "><%= DataPerforma.tipe_bahan_bakar %></label> 
+                            </div>
+                            <div class="form-group col-sm-6">
+                                <label class="col-sm-6">Konsumsi Bahan Bakar Normal<span style="float: right;">:</span></label>
+                                <label class="label-control "><%= DataPerforma.konsumsi_bahan_bakar_normal %></label>
+                            </div>
+                            <div class="form-group col-sm-6">
+                                <label class="col-sm-6">Konsumsi Bahan Bakar Tol<span style="float: right;">:</span></label>
+                                <label class="label-control "><%= DataPerforma.konsumsi_bahan_bakar_tol %></label>
+                            </div>
+                        </div>
+                        <% if(DataPerformaPhoto != null || DataPerformaPhoto.length > 0){ %>
+                            <div class="form-group row" style="margin-top: 10px;">
+                                <% for(var i=0; i < DataPerformaPhoto.length; i++) { %>
+                                    <div class="col-lg-2">
+                                        <div class="col-sm-3">
+                                            <div class="form-group col-sm-3">
+                                                <div class="image-input image-input-outline" id="" style="background-image: url(/uploads/<%=DataPerformaPhoto[i].file_name%>);">
+                                                    <div class="image-input-wrapper">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                <% } %>
+                            </div>
+                        <% } %>
+                    </div>
+                    <div class="tab-pane fade" id="dimensi" role="tabpanel" aria-labelledby="dimensi-tab">
+                        <div class="row">
+                            <div class="form-group col-sm-6">
+                                <label class="col-sm-6">LxWxH (mm)<span style="float: right;">:</span></label>
+                                <label class="label-control "><%= DataDimensi.lxwxhx %></label>
+                            </div>
+                            <div class="form-group col-sm-6">
+                                <label class="col-sm-6">Ground Clearance<span style="float: right;">:</span></label>
+                                <label class="label-control "><%= DataDimensi.ground_clearance %></label>
+                            </div>
+                            <div class="form-group col-sm-6">
+                                <label class="col-sm-6">Wheel Base<span style="float: right;">:</span></label>
+                                <label class="label-control "><%= DataDimensi.wheel_base %></label>
+                            </div>
+                            <div class="form-group col-sm-6">
+                                <label class="col-sm-6">Kapasitas Penumpang<span style="float: right;">:</span></label>
+                                <label class="label-control "><%= DataDimensi.kapasitas_penumpang %></label>
+                            </div>
+                            <div class="form-group col-sm-6">
+                                <label class="col-sm-6">Kapasitas Bagasi<span style="float: right;">:</span></label>
+                                <label class="label-control "><%= DataDimensi.kapasitas_bagasi %></label>
+                            </div>
+                            <div class="form-group col-sm-6">
+                                <label class="col-sm-6">Jumlah Pintu<span style="float: right;">:</span></label>
+                                <label class="label-control "><%= DataDimensi.jumlah_pintu %></label>
+                            </div>
+                        </div>
+                        <% if(DataDimensiPhoto != null || DataDimensiPhoto.length > 0){ %>
+                            <div class="form-group row" style="margin-top: 10px;">
+                                <% for(var i=0; i < DataDimensiPhoto.length; i++) { %>
+                                    <div class="col-lg-2">
+                                        <div class="col-sm-3">
+                                            <div class="form-group col-sm-3">
+                                                <div class="image-input image-input-outline" id="" style="background-image: url(/uploads/<%=DataDimensiPhoto[i].file_name%>);">
+                                                    <div class="image-input-wrapper">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                <% } %>
+                            </div>
+                        <% } %>
+                    </div>
+                    <div class="tab-pane fade active show" id="eksterior" role="tabpanel" aria-labelledby="eksterior-tab">
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <div class="form-group col-sm-12 row">
+                                    <label class="col-sm-3">Warna<span style="float: right;">:</span></label>
+                                    <label class="label-control "><%= DataEksterior.warna %></label>
+                                </div>
+                                <div class="form-group col-sm-12 row">
+                                    <label class="col-sm-3 col-form-label">Spion <span style="float: right;">:</span></label>
+                                    <div class="col-9 col-form-label">
+                                        <div class="checkbox-list">
+                                            <label class="checkbox">
+                                                <%   if(DataEksterior.spion_electric){ %>
+                                                    <input type="checkbox" checked  name="spion_electric" disabled="disabled"/>
+                                                <%   }else{ %>
+                                                    <input type="checkbox"  name="spion_electric" disabled="disabled"/>
+                                                <%   } %>
+                                                <span></span>
+                                                Electric
+                                            </label>
+                                            <label class="checkbox">
+                                                <%   if(DataEksterior.spion_folding){ %>
+                                                    <input type="checkbox" checked  name="spion_folding" disabled="disabled"/>
+                                                <%   }else{ %>
+                                                    <input type="checkbox"  name="spion_folding" disabled="disabled"/>
+                                                <%   } %>
+                                                <span></span>
+                                                Folding
+                                            </label>
+                                            <label class="checkbox">
+                                                <%   if(DataEksterior.spion_lampu_signal){ %>
+                                                    <input type="checkbox" checked  name="spion_lampu_signal" disabled="disabled"/>
+                                                <%   }else{ %>
+                                                    <input type="checkbox"  name="spion_lampu_signal" disabled="disabled"/>
+                                                <%   } %>
+                                                <span></span>
+                                                Lampu Signal
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group col-sm-12 row">
+                                    <label class="col-sm-3">Fog Lamp<span style="float: right;">:</span></label>
+                                    <label class="label-control "><%= DataEksterior.fog_lamp %></label>
+                                </div>
+                                <div class="form-group col-sm-12 row">
+                                    <label class="col-sm-3">Door Handle<span style="float: right;">:</span></label>
+                                    <label class="label-control "><%= DataEksterior.door_handle %></label>
+                                </div>
+                                <div class="form-group col-sm-12 row">
+                                    <label class="col-3 col-form-label">Keyless Entry <span style="float: right;">:</span></label>
+                                    <div class="col-9 col-form-label">
+                                        <div class="checkbox-list">
+                                            <label class="checkbox">
+                                                <%   if(DataEksterior.keyless_entry_pintu_penumpang){ %>
+                                                    <input type="checkbox" checked  name="keyless_entry_pintu_penumpang" disabled="disabled"/>
+                                                <%   }else{ %>
+                                                    <input type="checkbox"  name="keyless_entry_pintu_penumpang" disabled="disabled"/>
+                                                <%   } %>
+                                                <span></span>
+                                                Pintu Penumpang
+                                            </label>
+                                            <label class="checkbox">
+                                                <%   if(DataEksterior.keyless_entry_bagasi){ %>
+                                                    <input type="checkbox" checked  name="keyless_entry_bagasi" disabled="disabled"/>
+                                                <%   }else{ %>
+                                                    <input type="checkbox"  name="keyless_entry_bagasi" disabled="disabled"/>
+                                                <%   } %>
+                                                <span></span>
+                                                Bagasi
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group col-sm-12 row">
+                                    <label class="col-sm-3">Sun Roof<span style="float: right;">:</span></label>
+                                    <label class="label-control "><%= DataEksterior.sun_roof %></label>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-group col-sm-12 row">
+                                    <label class="col-sm-4">Tipe Cat<span style="float: right;">:</span></label>
+                                    <label class="label-control "><%= DataEksterior.tipe_cat %></label>
+                                </div>
+                                <div class="form-group col-sm-12 row">
+                                    <label class="col-sm-4">Head Light<span style="float: right;">:</span></label>
+                                    <label class="label-control "><%= DataEksterior.head_light %></label>
+                                </div>
+                                <div class="form-group col-sm-12 row">
+                                    <label class="col-sm-4">Tail Light<span style="float: right;">:</span></label>
+                                    <label class="label-control "><%= DataEksterior.tail_light %></label>
+                                </div>
+                                <div class="form-group col-sm-12 row">
+                                    <label class="col-sm-4">Signal Light<span style="float: right;">:</span></label>
+                                    <label class="label-control "><%= DataEksterior.signal_light %></label>
+                                </div>
+                                <div class="form-group col-sm-12 row">
+                                    <label class="col-sm-4">Door Soft Close<span style="float: right;">:</span></label>
+                                    <label class="label-control "><%= DataEksterior.door_soft_close %></label>
+                                </div>
+                                <div class="form-group col-sm-12 row">
+                                    <label class="col-sm-4">Parking Sensor<span style="float: right;">:</span></label>
+                                    <label class="label-control "><%= DataEksterior.parking_sensor %></label>
+                                </div>
+                                <div class="form-group col-sm-12 row">
+                                    <label class="col-sm-4">Bentuk Knalpot<span style="float: right;">:</span></label>
+                                    <label class="label-control "><%= DataEksterior.bentuk_knalpot %></label>
+                                </div>
+                            </div>
+                        </div>
+                        <% if(DataEksteriorPhoto != null || DataEksteriorPhoto.length > 0){ %>
+                            <div class="form-group row" style="margin-top: 10px;">
+                                <% for(var i=0; i < DataEksteriorPhoto.length; i++) { %>
+                                    <div class="col-lg-2">
+                                        <div class="col-sm-3">
+                                            <div class="form-group col-sm-3">
+                                                <div class="image-input image-input-outline" id="" style="background-image: url(/uploads/<%=DataEksteriorPhoto[i].file_name%>);">
+                                                    <div class="image-input-wrapper">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                <% } %>
+                            </div>
+                        <% } %>
+                    </div>
+                    <div class="tab-pane fade" id="interior" role="tabpanel" aria-labelledby="interior-tab">
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <div class="form-group col-sm-12 row">
+                                    <label class="col-sm-4">Jok Kulit<span style="float: right;">:</span></label>
+                                    <label class="label-control "><%= DataInterior.jok_kulit %></label>
+                                </div>
+                                <div class="form-group col-sm-12 row">
+                                    <label class="col-sm-4">Power Bagasi<span style="float: right;">:</span></label>
+                                    <label class="label-control "><%= DataInterior.power_bagasi %></label>
+                                </div>
+                                <div class="form-group col-sm-12 row">
+                                    <label class="col-4 col-form-label">Central Lock <span style="float: right;">:</span></label>
+                                    <div class="col-8 col-form-label">
+                                        <div class="checkbox-list">
+                                            <label class="checkbox">
+                                                <%   if(DataInterior.central_lock_driver){ %>
+                                                    <input type="checkbox" checked  name="central_lock_driver" disabled="disabled"/>
+                                                <%   }else{ %>
+                                                    <input type="checkbox"  name="central_lock_driver" disabled="disabled"/>
+                                                <%   } %>
+                                                <span></span>
+                                                Driver
+                                            </label>
+                                            <label class="checkbox">
+                                                <%   if(DataInterior.central_lock_front_passanger){ %>
+                                                    <input type="checkbox" checked  name="central_lock_front_passanger" disabled="disabled"/>
+                                                <%   }else{ %>
+                                                    <input type="checkbox"  name="central_lock_front_passanger" disabled="disabled"/>
+                                                <%   } %>
+                                                <span></span>
+                                                Front Passanger
+                                            </label>
+                                            <label class="checkbox">
+                                                <%   if(DataInterior.central_lock_rear_passanger){ %>
+                                                    <input type="checkbox" checked  name="central_lock_rear_passanger" disabled="disabled"/>
+                                                <%   }else{ %>
+                                                    <input type="checkbox"  name="central_lock_rear_passanger" disabled="disabled"/>
+                                                <%   } %>
+                                                <span></span>
+                                                Rear Passanger
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group col-sm-12 row">
+                                    <label class="col-sm-4">Digital Dashboard<span style="float: right;">:</span></label>
+                                    <label class="label-control "><%= DataInterior.digital_dashboard %></label>
+                                </div>
+                                <div class="form-group col-sm-12 row">
+                                    <label class="col-sm-4">Heads Up Display<span style="float: right;">:</span></label>
+                                    <label class="label-control "><%= DataInterior.heads_up_display %></label>
+                                </div>
+                                <div class="form-group col-sm-12">
+                                    <label>Touch Screen Display</label>
+                                    <div class="form-group col-sm-12 row">
+                                        <label class="col-sm-4">Jumlah<span style="float: right;">:</span></label>
+                                        <label class="label-control "><%= DataInterior.touch_screen_display_jumlah %></label>
+                                    </div>
+                                    <div class="form-group col-sm-12 row">
+                                        <label class="col-sm-4">Ukuran<span style="float: right;">:</span></label>
+                                        <label class="label-control "><%= DataInterior.touch_screen_display_ukuran %></label>
+                                    </div>
+                                </div>
+                                <div class="form-group col-sm-12">
+                                    <label>Number Of Vents</label>
+                                    <div class="form-group col-sm-12 row">
+                                        <label class="col-sm-4">Front<span style="float: right;">:</span></label>
+                                        <label class="label-control "><%= DataInterior.number_of_vent_front %></label>
+                                    </div>
+                                    <div class="form-group col-sm-12 row">
+                                        <label class="col-sm-4">Rear<span style="float: right;">:</span></label>
+                                        <label class="label-control "><%= DataInterior.number_of_vent_rear %></label>
+                                    </div>
+                                </div>
+                                <div class="form-group col-sm-12 row">
+                                    <label class="col-sm-4">Rear Passanger TV<span style="float: right;">:</span></label>
+                                    <label class="label-control "><%= DataInterior.rear_passanger_tv %></label>
+                                </div>
+                                <div class="form-group col-sm-12 row">
+                                    <label class="col-sm-4">Cool Box<span style="float: right;">:</span></label>
+                                    <label class="label-control "><%= DataInterior.cool_box %></label>
+                                </div>
+                                <div class="form-group col-sm-12 row">
+                                    <label class="col-sm-4">Vanity Mirror<span style="float: right;">:</span></label>
+                                    <label class="label-control "><%= DataInterior.vanity_mirror %></label>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-group col-sm-12 row">
+                                    <label class="col-sm-5">Power Window<span style="float: right;">:</span></label>
+                                    <label class="label-control "><%= DataInterior.power_window %></label>
+                                </div>
+                                <div class="form-group col-sm-12 row">
+                                    <label class="col-sm-5">Power Seat<span style="float: right;">:</span></label>
+                                    <label class="label-control "><%= DataInterior.power_seat %></label>
+                                </div>
+                                <div class="form-group col-sm-12 row">
+                                    <label class="col-sm-5">Engine Start/Stop<span style="float: right;">:</span></label>
+                                    <label class="label-control "><%= DataInterior.engine_start_stop %></label>
+                                </div>
+                                <div class="form-group row col-sm-12">
+                                    <label class="col-5 col-form-label">Central Lock <span style="float: right;">:</span></label>
+                                    <div class="col-7 col-form-label">
+                                        <div class="checkbox-list">
+                                            <label class="checkbox">
+                                                <%   if(DataInterior.central_lock_adjustable){ %>
+                                                    <input type="checkbox" checked  name="central_lock_adjustable" disabled="disabled"/>
+                                                <%   }else{ %>
+                                                    <input type="checkbox"  name="central_lock_adjustable" disabled="disabled"/>
+                                                <%   } %>
+                                                <span></span>
+                                                Adjustable
+                                            </label>
+                                            <label class="checkbox">
+                                                <%   if(DataInterior.central_lock_cruise_control){ %>
+                                                    <input type="checkbox" checked  name="central_lock_cruise_control" disabled="disabled"/>
+                                                <%   }else{ %>
+                                                    <input type="checkbox"  name="central_lock_cruise_control" disabled="disabled"/>
+                                                <%   } %>
+                                                <span></span>
+                                                Cruise Control
+                                            </label>
+                                            <label class="checkbox">
+                                                <%   if(DataInterior.central_lock_audio_control){ %>
+                                                    <input type="checkbox" checked  name="central_lock_audio_control" disabled="disabled"/>
+                                                <%   }else{ %>
+                                                    <input type="checkbox"  name="central_lock_audio_control" disabled="disabled"/>
+                                                <%   } %>
+                                                <span></span>
+                                                Audio Control
+                                            </label>
+                                            <label class="checkbox">
+                                                <%   if(DataInterior.central_lock_gearshift_paddle){ %>
+                                                    <input type="checkbox" checked  name="central_lock_gearshift_paddle" disabled="disabled"/>
+                                                <%   }else{ %>
+                                                    <input type="checkbox"  name="central_lock_gearshift_paddle" disabled="disabled"/>
+                                                <%   } %>
+                                                <span></span>
+                                                Gearshift Paddle
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group col-sm-12 row">
+                                    <label class="col-sm-5">Navigation<span style="float: right;">:</span></label>
+                                    <label class="label-control "><%= DataInterior.navigation %></label>
+                                </div>
+                                <div class="form-group col-sm-12">
+                                    <label>Air Conditioner</label>
+                                    <div class="form-group col-sm-12 row">
+                                        <label class="col-sm-5">Double Blower<span style="float: right;">:</span></label>
+                                        <label class="label-control "><%= DataInterior.air_conditioner_double_blower %></label>
+                                    </div>
+                                    <div class="form-group col-sm-12 row">
+                                        <label class="col-sm-5">Touch Screen Control<span style="float: right;">:</span></label>
+                                        <label class="label-control "><%= DataInterior.air_conditioner_touch_screen_control %></label>
+                                    </div>
+                                </div>
+                                <div class="form-group col-sm-12 row">
+                                    <label class="col-sm-5">Voice Command/Control<span style="float: right;">:</span></label>
+                                    <label class="label-control "><%= DataInterior.voice_command_control %></label>
+                                </div>
+                                <div class="form-group col-sm-12 row">
+                                    <label class="col-sm-5">Rear Passanger Controller<span style="float: right;">:</span></label>
+                                    <label class="label-control "><%= DataInterior.rear_passanger_controller %></label>
+                                </div>
+                                <div class="form-group col-sm-12 row">
+                                    <label class="col-sm-5">Ambience Lightning<span style="float: right;">:</span></label>
+                                    <label class="label-control "><%= DataInterior.ambience_lightning %></label>
+                                </div>
+                                <div class="form-group col-sm-12 row">
+                                    <label class="col-sm-5">Folding Table<span style="float: right;">:</span></label>
+                                    <label class="label-control "><%= DataInterior.folding_table %></label>
+                                </div>
+                            </div>
+                        </div>
+                        <% if(DataInteriorPhoto != null || DataInteriorPhoto.length > 0){ %>
+                            <div class="form-group row" style="margin-top: 10px;">
+                                <% for(var i=0; i < DataInteriorPhoto.length; i++) { %>
+                                    <div class="col-lg-2">
+                                        <div class="col-sm-3">
+                                            <div class="form-group col-sm-3">
+                                                <div class="image-input image-input-outline" id="" style="background-image: url(/uploads/<%=DataInteriorPhoto[i].file_name%>);">
+                                                    <div class="image-input-wrapper">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                <% } %>
+                            </div>
+                        <% } %>
+                    </div>
+                    <div class="tab-pane fade" id="safety" role="tabpanel" aria-labelledby="safety-tab">
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <div class="form-group col-sm-12 row">
+                                    <label class="col-sm-5">Seat Belts<span style="float: right;">:</span></label>
+                                    <label class="label-control "><%= DataSafety.seat_belts %></label>
+                                </div>
+                                <div class="form-group row col-sm-12">
+                                    <label class="col-5 col-form-label">Airbags <span style="float: right;">:</span></label>
+                                    <div class="col-7 col-form-label">
+                                        <div class="checkbox-list">
+                                            <label class="checkbox">
+                                                <%   if(DataSafety.airbag_driver){ %>
+                                                    <input type="checkbox" checked  name="airbag_driver" disabled="disabled"/>
+                                                <%   }else{ %>
+                                                    <input type="checkbox"  name="airbag_driver" disabled="disabled"/>
+                                                <%   } %>
+                                                <span></span>
+                                                Driver
+                                            </label>
+                                            <label class="checkbox">
+                                                <%   if(DataSafety.airbag_front_passanger){ %>
+                                                    <input type="checkbox" checked  name="airbag_front_passanger" disabled="disabled"/>
+                                                <%   }else{ %>
+                                                    <input type="checkbox"  name="airbag_front_passanger" disabled="disabled"/>
+                                                <%   } %>
+                                                <input type="checkbox" name="airbag_front_passanger"/>
+                                                <span></span>
+                                                Front Passanger
+                                            </label>
+                                            <label class="checkbox">
+                                                <%   if(DataSafety.airbag_rear_passanger){ %>
+                                                    <input type="checkbox" checked  name="airbag_rear_passanger" disabled="disabled"/>
+                                                <%   }else{ %>
+                                                    <input type="checkbox"  name="airbag_rear_passanger" disabled="disabled"/>
+                                                <%   } %>
+                                                <span></span>
+                                                Rear Passanger
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group col-sm-12 row">
+                                    <label class="col-sm-5">Electronic Stability Control<span style="float: right;">:</span></label>
+                                    <label class="label-control "><%= DataSafety.electronic_stability_control %></label>
+                                </div> 
+                                <div class="form-group col-sm-12 row">
+                                    <label class="col-sm-5">Rear Cross Traffic Alert<span style="float: right;">:</span></label>
+                                    <label class="label-control "><%= DataSafety.rear_cross_traffic_control %></label>
+                                </div>
+                                <div class="form-group col-sm-12 row">
+                                    <label class="col-sm-5">Forward Collision Warning<span style="float: right;">:</span></label>
+                                    <label class="label-control "><%= DataSafety.forward_collision_warning %></label>
+                                </div>
+                                <div class="form-group col-sm-12 row">
+                                    <label class="col-sm-5">Blind Spot Warning<span style="float: right;">:</span></label>
+                                    <label class="label-control "><%= DataSafety.blind_spot_warning %></label>
+                                </div>
+                                <div class="form-group col-sm-12 row">
+                                    <label class="col-sm-5">Night Vision<span style="float: right;">:</span></label>
+                                    <label class="label-control "><%= DataSafety.night_vision %></label>
+                                </div>
+                                <div class="form-group col-sm-12 row">
+                                    <label class="col-sm-5">Engine Immobilizer<span style="float: right;">:</span></label>
+                                    <label class="label-control "><%= DataSafety.engine_immobilizer %></label>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-group col-sm-12 row">
+                                    <label class="col-sm-5">Seat Belts Reminder<span style="float: right;">:</span></label>
+                                    <label class="label-control "><%= DataSafety.seat_belts_reminder %></label>
+                                </div>
+                                <div class="form-group col-sm-12 row">
+                                    <label class="col-sm-5">Child Safety Lock<span style="float: right;">:</span></label>
+                                    <label class="label-control "><%= DataSafety.child_safety_lock %></label>
+                                </div>
+                                <div class="form-group col-sm-12 row">
+                                    <label class="col-sm-5">ABS<span style="float: right;">:</span></label>
+                                    <label class="label-control "><%= DataSafety.abs %></label>
+                                </div>
+                                <div class="form-group col-sm-12 row">
+                                    <label class="col-sm-5">Automatic Emergency Brake<span style="float: right;">:</span></label>
+                                    <label class="label-control "><%= DataSafety.automatic_emergency_brake %></label>
+                                </div>
+                                <div class="form-group col-sm-12 row">
+                                    <label class="col-sm-5">Adaptive Cruise Control<span style="float: right;">:</span></label>
+                                    <label class="label-control "><%= DataSafety.adaptive_cruise_control %></label>
+                                </div>
+                                <div class="form-group col-sm-12 row">
+                                    <label class="col-sm-5">Lane Departure Warning & Assist<span style="float: right;">:</span></label>
+                                    <label class="label-control "><%= DataSafety.lane_departure_warning_and_assist %></label>
+                                </div>
+                                <div class="form-group col-sm-12 row">
+                                    <label class="col-sm-5">Autonomus Driving<span style="float: right;">:</span></label>
+                                    <label class="label-control "><%= DataSafety.autonomus_driving %></label>
+                                </div>
+                                <div class="form-group col-sm-12 row">
+                                    <label class="col-sm-5">Anti Theft Alarm<span style="float: right;">:</span></label>
+                                    <label class="label-control "><%= DataSafety.anti_thef_alarm %></label>
+                                </div>
+                                <div class="form-group col-sm-12 row">
+                                    <label class="col-sm-5">Crash Test Rating<span style="float: right;">:</span></label>
+                                    <label class="label-control "><%= DataSafety.crash_test_rating %></label>
+                                </div>
+                            </div>
+                        </div>
+                        <% if(DataSafetyPhoto != null || DataSafetyPhoto.length > 0){ %>
+                            <div class="form-group row" style="margin-top: 10px;">
+                                <% for(var i=0; i < DataSafetyPhoto.length; i++) { %>
+                                    <div class="col-lg-2">
+                                        <div class="col-sm-3">
+                                            <div class="form-group col-sm-3">
+                                                <div class="image-input image-input-outline" id="" style="background-image: url(/uploads/<%=DataSafetyPhoto[i].file_name%>);">
+                                                    <div class="image-input-wrapper">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                <% } %>
+                            </div>
+                        <% } %>
+                    </div>
+                    <div class="tab-pane fade" id="entertaiment" role="tabpanel" aria-labelledby="entertaiment-tab">
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <div class="form-group col-sm-12 row">
+                                    <label class="col-sm-5">USB & AUX Input<span style="float: right;">:</span></label>
+                                    <label class="label-control "><%= DataEnteriment.usb_and_aux %></label>
+                                </div>
+                                <div class="form-group col-sm-12 row">
+                                    <label class="col-sm-5">Android Auto<span style="float: right;">:</span></label>
+                                    <label class="label-control "><%= DataEnteriment.android_auto %></label>
+                                </div>
+                                <div class="form-group col-sm-12">
+                                    <label>Speaker </label>
+                                    <div class="form-group col-sm-12 row">
+                                        <label class="col-sm-5">Brand<span style="float: right;">:</span></label>
+                                        <label class="label-control "><%= DataEnteriment.speaker_brand %></label>
+                                    </div>
+                                    <div class="form-group col-sm-12 row">
+                                        <label class="col-sm-5">Front Speaker<span style="float: right;">:</span></label>
+                                        <label class="label-control "><%= DataEnteriment.speaker_front %></label>
+                                    </div>
+                                    <div class="form-group col-sm-12 row">
+                                        <label class="col-sm-5">Rear Speaker<span style="float: right;">:</span></label>
+                                        <label class="label-control "><%= DataEnteriment.speaker_rear %></label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-group col-sm-12 row">
+                                    <label class="col-sm-5">Bluetooth<span style="float: right;">:</span></label>
+                                    <label class="label-control "><%= DataEnteriment.bluetooth %></label>
+                                </div>
+                                <div class="form-group col-sm-12 row">
+                                    <label class="col-sm-5">Apple Car Play<span style="float: right;">:</span></label>
+                                    <label class="label-control "><%= DataEnteriment.apple_car_play %></label>
+                                </div>
+                                <div class="form-group col-sm-12 row">
+                                    <label class="col-sm-5">Radio/CD/DVD<span style="float: right;">:</span></label>
+                                    <label class="label-control "><%= DataEnteriment.radio_cd_dvd %></label>
+                                </div>
+                                <div class="form-group col-sm-12 row">
+                                    <label class="col-sm-5">Rear TV Display<span style="float: right;">:</span></label>
+                                    <label class="label-control "><%= DataEnteriment.rear_tv_display %></label>
+                                </div>
+                                <div class="form-group col-sm-12 row">
+                                    <label class="col-sm-5">Rear Passanger Controller<span style="float: right;">:</span></label>
+                                    <label class="label-control "><%= DataEnteriment.rear_passanger_controller %></label>
+                                </div>
+                            </div>
+                        </div>
+                        <% if(DataEnterimentPhoto != null || DataEnterimentPhoto.length > 0){ %>
+                            <div class="form-group row" style="margin-top: 10px;">
+                                <% for(var i=0; i < DataEnterimentPhoto.length; i++) { %>
+                                    <div class="col-lg-2">
+                                        <div class="col-sm-3">
+                                            <div class="form-group col-sm-3">
+                                                <div class="image-input image-input-outline" id="" style="background-image: url(/uploads/<%=DataEnterimentPhoto[i].file_name%>);">
+                                                    <div class="image-input-wrapper">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                <% } %>
+                            </div>
+                        <% } %>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card card-custom gutter-b example example-compact">
+            <div class="card-header">
+                <h3 class="card-title">Detail Foto</h3>
+            </div>
+            <div class="form-group row" style="margin-top: 10px;">
+                <% for(var i=0; i < DataPhotos.length; i++) { %>
+                    <div class="col-lg-2">
+                        <div class="col-sm-3">
+                            <div class="form-group col-sm-3">
+                                <div class="image-input image-input-outline" id="" style="background-image: url(/uploads/<%=DataPhotos[i].file_name%>);">
+                                    <div class="image-input-wrapper">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                <% } %>
+            </div>
+        </div>
+        <div class="card card-custom gutter-b example example-compact">
+            <div class="card-header">
+                <h3 class="card-title">Detail Berita</h3>
+            </div>
+            <% if(DataBerita != null) { %>
+            <div class="form-group row col-sm-12" style="margin-top: 10px;">
+                <div class="col-sm-6">
+                    <div class="form-group col-sm-12">
+                        <img style="border: 1px solid black;" width="100%" height="100%" id="blah" src="/uploads/<%=DataBerita.file_name%>" alt="your image" />
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="form-group col-sm-12 row">
+                        <label class="col-sm-5">Headline Berita<span style="float: right;">:</span></label>
+                        <label class="label-control "><%= DataBerita.headline %></label>
+                    </div>
+                    <div class="form-group col-sm-12 row">
+                        <label class="col-sm-5">Link Berita<span style="float: right;">:</span></label>
+                        <label class="label-control "><%= DataBerita.link %></label>
+                    </div>
+                    <div class="form-group col-sm-12 row">
+                        <label class="col-sm-5">&nbsp;<span style="float: right;">&nbsp;</span></label>
+                        <label class="label-control ">&nbsp;</label>
+                    </div>
+                </div>
+            </div>
+            <% } %>
+        </div>
+        <div class="card card-custom gutter-b example example-compact">
+            <div class="card-header">
+                <h3 class="card-title">Detail Video</h3>
+            </div>
+            <% if(DataVideo != null){ %>
+            <div class="form-group row col-sm-12" style="margin-top: 10px;">
+                <div class="col-sm-6">
+                    <div class="form-group col-sm-12">
+                        <% if(DataVideo.link_video == null || DataVideo.link_video == ""){ %>
+                        <video width="100%" controls>
+                            <source src="/uploads/<%=DataVideo.file_name%>" id="video_here">
+                                Your browser does not support HTML5 video.
+                        </video>
+                        <% }else{ %>
+                            <iframe width="100%" height="250" src="<%= DataVideo.link_video %>"></iframe>
+                        <% } %>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="form-group col-sm-12 row">
+                        <label class="col-sm-5">Headline Video<span style="float: right;">:</span></label>
+                        <label class="label-control "><%= DataVideo.headline_video %></label>
+                    </div>
+                    <div class="form-group col-sm-12 row">
+                        <label class="col-sm-5">Link Video<span style="float: right;">:</span></label>
+                        <label class="label-control "><%= DataVideo.link_video %></label>
+                    </div>
+                    <div class="form-group col-sm-12 row">
+                        <label class="col-sm-5">&nbsp;<span style="float: right;">&nbsp;</span></label>
+                        <label class="label-control ">&nbsp;</label>
+                    </div>
+                </div>
+            </div>
+            <% } %>
+        </div>
+        <div class="card card-custom gutter-b example example-compact">
+            <div class="card-header">
+                <div class="card-footer">
+                    <!-- <a href="/mobil/edit/<%= DataHeader.id %>"><button type="button" class="btn btn-primary mr-2">Edit</button></a> -->
+                    <a href="/mobil"><button type="button" class="btn btn-secondary">Cancel</button></a>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</div>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<script>
+$(document).ready(function() {
+    var options = {
+        type: 'remote',
+        rowDetail: {
+            expand: 'fa fa-caret-down',
+            collapse: 'fa fa-caret-right'
+        }
+    }
+    var datatable = $('.my_datatable').KTDatatable(options);
+
+    var avatar6 = new KTImageInput('kt_image_6');
+    var avatar7 = new KTImageInput('kt_image_7');
+
+    $("#imgInp").change(function() {
+        readURL(this);
+    });
+});
+
+$(document).on("change", ".file_multi_video", function(evt) {
+  var $source = $('#video_here');
+  $source[0].src = URL.createObjectURL(this.files[0]);
+  $source.parent()[0].load();
+});
+
+function readURL(input) {
+  if (input.files && input.files[0]) {
+    var reader = new FileReader();
+    
+    reader.onload = function(e) {
+      $('#blah').attr('src', e.target.result);
+    }
+    
+    reader.readAsDataURL(input.files[0]); // convert to base64 string
+  }
+}
+</script>

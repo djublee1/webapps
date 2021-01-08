@@ -1,0 +1,50 @@
+<div class="d-flex flex-column-fluid">
+    <div class="container">
+        <div class="subheader py-2 py-lg-4 subheader-solid" id="kt_subheader">
+            <div class="container-fluid d-flex align-items-center justify-content-between flex-wrap flex-sm-nowrap">
+                <div class="d-flex align-items-center flex-wrap mr-2">
+                    <h5 class="text-dark font-weight-bold mt-2 mb-2 mr-5">Tahun</h5>
+                    <div class="subheader-separator subheader-separator-ver mt-2 mb-2 mr-4 bg-gray-200"></div>
+                    <span class="text-muted font-weight-bold mr-4">Create Data</span>
+                </div>
+            </div>
+        </div>
+        <div class="card card-custom gutter-b example example-compact">
+            <div class="card-header">
+                <h3 class="card-title">Input Data</h3>
+            </div>
+            <!--begin::Form-->
+            <form class="form" action="/tahun/update" method="post"> 
+                <div class="card-body">
+                    <div class="form-group col-sm-4">
+                        <label>Tahun</label>
+                        <input type="hidden" class="form-control form-control-solid" value="<%= data.id %>" placeholder="merk" name="id" id="id"/>
+                        <input type="text" class="form-control form-control-solid" value="<%= data.tahun %>" placeholder="merk" name="tahun" id="tahun"/>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <button type="submit" class="btn btn-primary mr-2">Submit</button>
+                    <button type="/tahun" class="btn btn-secondary">Cancel</button>
+                </div>
+            </form>
+            <!--end::Form-->
+        </div>
+    </div>
+</div>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<script>
+    $(document).ready(function() {
+        var options = {
+            // type: 'remote',
+            search: {
+                onEnter: true,
+                input: $('#generalSearch'),
+            },
+            rowDetail: {
+                expand: 'fa fa-caret-down',
+                collapse: 'fa fa-caret-right'
+            }
+        }
+        var datatable = $('.my_datatable').KTDatatable(options);
+    });
+</script>

@@ -1,0 +1,26 @@
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title>DjuBlee</title>
+		<meta name="description" content="Metronic admin dashboard live demo. Check out all the features of the admin panel. A large number of settings, additional services and widgets." />
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+		<%- include('../partials/_resources_css.ejs') %>
+		<link rel="shortcut icon" href="/media/logos/favicon.ico" />
+    </head>
+    <body id="kt_body" class="header-fixed header-mobile-fixed subheader-enabled subheader-fixed aside-enabled aside-fixed aside-minimize-hoverable page-loading">
+		<%- include('../partials/_sidebar_mobile.ejs') %>
+		<div class="d-flex flex-column flex-root">
+			<div class="d-flex flex-row flex-column-fluid page">
+				<%- include('../partials/_sidebar_web.ejs') %>
+				<div class="d-flex flex-column flex-row-fluid wrapper" id="kt_wrapper">
+					<%- include('../partials/_headerbar.ejs') %>
+					<div class="content d-flex flex-column flex-column-fluid" id="kt_content">
+						<%- body %>
+					</div>
+					<%- include('../partials/_footerbar.ejs') %>
+				</div>
+			</div>
+		</div>
+		<%- include('../partials/_resources_js.ejs') %>
+    </body>
+</html>
